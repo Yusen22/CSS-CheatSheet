@@ -203,7 +203,7 @@ pre code {
     }
 
     header p {
-        width:auto;
+        width: auto;
         font-size: 18px;
         margin: 20px 10px;
     }
@@ -243,28 +243,28 @@ pre code {
     main section h2 {
         font-size: 145%;
         text-align: center;
+    }
 }
-    }
 
-    main section p {
-        font-size: 88%;
-        width: 100%;
-    }
+main section p {
+    font-size: 88%;
+    width: 100%;
+}
 
-    .bRow,
-    .tRow {
-        height: 200px
-    }
+.bRow,
+.tRow {
+    height: 200px
+}
 
-    #flexbox-row,
-    #flexbox-col,
-    #grid-layout {
-        min-height: 370px;
-    }
+#flexbox-row,
+#flexbox-col,
+#grid-layout {
+    min-height: 370px;
+}
 
-    .card {
-        min-height: 370px;
-    }
+.card {
+    min-height: 370px;
+}
 
 
 
@@ -272,20 +272,22 @@ pre code {
     main {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "fbr" 
-        "fbc"
-        "grl" 
-        "lng"
-        "btrans" 
-        "ovrlay";
-}
-main section h2 {
-    font-size: 180%;
-}
+        grid-template-areas:
+            "fbr"
+            "fbc"
+            "grl"
+            "lng"
+            "btrans"
+            "ovrlay";
+    }
 
-main section p {
-    font-size: 100%;
+    main section h2 {
+        font-size: 180%;
+    }
+
+    main section p {
+        font-size: 100%;
+    }
 }
 
 .card {
