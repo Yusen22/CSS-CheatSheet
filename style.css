@@ -1,0 +1,299 @@
+:root {
+    --compPink: #b84ea7;
+    --compBR: 10px;
+    --compWhite: white;
+    --compBack: rgb(39, 39, 39)
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--compBack);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header {
+    text-align: center;
+    display: flex;
+    display: block;
+    user-select: all;
+}
+
+h1 {
+    color: var(--compPink);
+    font-size: 400%;
+}
+
+header p {
+    color: var(--compWhite);
+    font-size: 20px;
+    width: 1000px;
+    margin: 20px auto;
+
+}
+
+main {
+    margin: 110px 1%;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "fbr fbc grl"
+        "lng btrans ovrlay";
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+main section h2 {
+    width: 82%;
+    font-size: 170%;
+    margin: 0 auto;
+    border: 3px solid var(--compWhite);
+    border-radius: 5px;
+    padding: 12px 10px;
+    color: var(--compPink);
+    position: relative;
+    margin-top: -30px;
+    background-color: var(--compBack);
+
+}
+
+main section p {
+    color: var(--compPink);
+    position: relative;
+    display: inline-block;
+    padding: 0px 1px 10px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+
+}
+
+.tRow {
+    height: 150px;
+}
+
+.bRow {
+    height: 260px
+}
+
+#flexbox-row,
+#flexbox-col,
+#grid-layout {
+    min-height: 320px;
+}
+
+
+
+#flexbox-row {
+    grid-area: fbr;
+}
+
+#flexbox-col {
+    grid-area: fbc;
+}
+
+#grid-layout {
+    grid-area: grl;
+}
+
+#linear-grad {
+    grid-area: lng;
+}
+
+#box-trans {
+    grid-area: btrans;
+}
+
+#overlay {
+    grid-area: ovrlay;
+}
+
+.card {
+    min-height: 450px;
+    padding: 0px 20px 10px 20px;
+    border: 3px dotted var(--compWhite);
+    margin: 0px 8% 15% 8%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.card:hover,
+h1:hover {
+
+    box-shadow: inset 0px 0px 8px rgb(30, 190, 134), 0 0 15px rgb(23, 147, 85);
+}
+
+pre code {
+    background-image: linear-gradient(to bottom, #b84ea7, #9368B7);
+    padding: 30px 10px;
+    border-radius: 10px;
+    font-size: 150%;
+    display: flex;
+    width: 90%;
+    min-height: 150px;
+    color: var(--compWhite);
+    user-select: all;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.codeDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 50px;
+}
+
+
+
+@media only screen and (max-width:1600px) {
+    pre code {
+        font-size: 140%;
+    }
+
+    main section p {
+        font-size: 100%;
+    }
+}
+
+
+@media only screen and (max-width:2050px) {
+    .card {
+        margin: 0px 1% 15% 1%;
+    }
+}
+
+@media only screen and (max-width:1460px) {
+    pre code {
+        font-size: 110%;
+    }
+
+    main section h2 {
+        font-size: 145%;
+    }
+
+
+
+    .tRow {
+        height: 130px;
+    }
+
+    .bRow {
+        height: 240px
+    }
+}
+
+@media only screen and (max-width:1145px) {
+    pre code {
+        font-size: 94%;
+    }
+
+    header p {
+        width:auto;
+        font-size: 18px;
+        margin: 20px 10px;
+    }
+
+
+    main section h2 {
+        font-size: 135%;
+    }
+
+    main section p {
+        font-size: 80%;
+    }
+
+    .card {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    pre code {
+        font-size: 106%;
+    }
+
+    header p {
+        margin: 20px 20px;
+    }
+
+    main {
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "fbr fbc"
+            "grl lng"
+            "btrans ovrlay";
+    }
+
+    main section h2 {
+        font-size: 145%;
+        text-align: center;
+}
+    }
+
+    main section p {
+        font-size: 88%;
+        width: 100%;
+    }
+
+    .bRow,
+    .tRow {
+        height: 200px
+    }
+
+    #flexbox-row,
+    #flexbox-col,
+    #grid-layout {
+        min-height: 370px;
+    }
+
+    .card {
+        min-height: 370px;
+    }
+
+
+
+@media only screen and (max-width:770px) {
+    main {
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "fbr" 
+        "fbc"
+        "grl" 
+        "lng"
+        "btrans" 
+        "ovrlay";
+}
+main section h2 {
+    font-size: 180%;
+}
+
+main section p {
+    font-size: 100%;
+}
+
+.card {
+    height: 440px
+}
+
+@media only screen and (max-width:375px) {
+    pre code {
+        font-size: 88%
+    }
+}
